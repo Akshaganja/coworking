@@ -6,246 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./fonts/stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <link rel="stylesheet" href="./css/style.css">
     <title>Coworking</title>
-    <style>
-        .header-container {
-            position: relative;
-            background-image: url('./images/BG.png');
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .main-navigation {
-            position: relative;
-            z-index: 1; /* Ensure navigation stays above background */
-        }
-
-        .text-container {
-            position: absolute;
-            top: 40%; /* Adjust to position vertically centered */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white; /* White text color */
-            font-family: 'gilroy-bold';
-            text-align: center;
-            z-index: 1; /* Ensure text is above background */
-            height: 130px;
-        }
-
-        .card-container {
-            position: absolute;
-            top: 60%; /* Adjusted to sit below the text */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white; /* White background */
-            border-radius: 8px; /* Rounded corners */
-            padding: 10px; /* Padding inside the card */
-            width: 770px; /* Card width */
-            height: 95px;
-            display: flex;
-            justify-content: space-between; /* Space items evenly */
-            align-items: center; /* Vertically center items */
-        }
-
-        .card-container select,
-        .card-container button {
-            margin: 0; /* Remove margin between elements */
-            font-family: 'gilroy-regular';
-        }
-
-        .card-container button {
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #473BF0;
-            padding: 10px 20px; /* Add padding inside the button */
-            width: 199px;
-            height: 51px;
-        }
-
-        .card-container select {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 15px;
-            font-family: 'gilroy-regular';
-            padding: 10px; /* Add padding inside the select box */
-            flex: 1; /* Make select elements grow to fill available space */
-            margin-right: 10px; /* Add spacing between select elements, if needed */
-            width: 250px;
-            height: 50px;
-        }
-
-        /* New styles for the main section */
-        .info-section {
-            display: flex;
-            justify-content: center; /* Center items horizontally */
-            align-items: flex-start; /* Align items to the top */
-            padding: 40px 20px;
-        }
-
-        .info {
-            text-align: center;
-            font-family: 'gilroy-regular';
-            max-width: 300px; /* Limit width of each info block */
-            margin-right: 50px;
-        }
-
-        .info h2 {
-            font-family: 'gilroy-bold';
-            color: black;
-        }
-
-        .info p {
-            font-family: 'gilroy-regular';
-            font-size: 19px;
-            color: grey;
-            margin: 0;
-        }
-
-        /* New style for the additional information */
-        .additional-info {
-            display: flex;
-            justify-content: center; /* Center the container horizontally */
-            padding: 20px;
-            font-family: 'gilroy-bold';
-        }
-
-        .additional-info .info {
-            font-family: 'gilroy-regular';
-            font-size: 19px;
-            color: grey;
-        }
-
-        /* New style for images section */
-        .images-section {
-            display: flex;
-            justify-content: center; /* Center items horizontally */
-            gap: 20px; /* Space between images */
-        }
-
-        .images-section img {
-            width: 300px; /* Adjust width as needed */
-            height: 556px; /* Adjust height as needed */
-            border-radius: 8px; /* Optional: Add rounded corners */
-            margin-right: 20px;
-
-        }
-
-        /* New container styles */
-        .info-container {
-            background-color: black; /* Black background */
-            color: white; /* White text color */
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            padding: 40px 20px;
-            gap: 20px; /* Space between left and right sections */
-        }
-
-        .info-container .left-side {
-            flex: 1;
-            text-align: center; /* Align text to the left */
-            font-family: 'gilroy';
-        }
-        .left-side h2{
-            font-family: 'gilroy-bold';
-            font-size: 40px;
-        }
-        .left-side p{
-            font-family: 'gilroy-regular';
-            color:gray;
-        }
-
-        .info-container .right-side {
-            flex: 1;
-            display: flex;
-            justify-content: center; /* Center card horizontally */
-        }
-
-        .info-container .right-side .card {
-            background-color: white; /* Card background color */
-            color: black; /* Card text color */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px;
-            width: 100%; /* Full width */
-            max-width: 300px; /* Max width for the card */
-            height: auto; /* Auto height based on content */
-        }
-
-        .info-container .right-side .card h3 {
-            font-family: 'gilroy-bold';
-            margin: 0;
-            font-size: 18px; /* Adjust font size */
-            margin-bottom: 10px; /* Space between headings */
-        }
-        .subscription-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .subscription-form input[type="text"] {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 16px;
-        width: 300px; /* Width of input field */
-        margin-bottom: 10px; /* Space between input and button */
-        font-family: 'gilroy';
-    }
-
-    .subscription-form button {
-        background-color: #473BF0; /* Button color */
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        width: 300px; /* Button width */
-    }
-    footer {
-        background-color: #ffff; /* Optional: Background color for the footer */
-        padding: 20px 0; /* Padding around the footer */
-    }
-
-    .container {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-    }
-
-    .footer-info {
-        display: flex;
-        justify-content: space-between; /* Space items evenly */
-        max-width: 1200px; /* Optional: Set a max-width */
-        width: 50%; /* Full width of the container */
-    }
-
-    
-
-    .info-block h3 {
-        color: gray; /* Heading color */
-        font-size: 18px; /* Font size for headings */
-        margin-bottom: 10px; /* Space below headings */
-    }
-
-    .info-block p {
-        color: black; /* Information color */
-        font-family: 'gilroy-regular'; /* Font style for paragraphs */
-        font-size: 14px; /* Font size for paragraphs */
-        margin: 5px 0; /* Space between paragraphs */
-    }
-   
-    
-        
-        
-    </style>
 </head>
 
 <body>
@@ -253,10 +15,9 @@
         <div class="header-container">
             <div class="main-navigation">
                 <nav>
-                    <div class="main-naviagtion--left">
+                    <div class="main-navigation--left">
                         <div class="logo">
                             BrainWave.io
-                            <!-- <img src="./images/logo.png" alt="logo"> -->
                         </div>
                         <ul>
                             <li><a href="#">Demos</a></li>
@@ -286,7 +47,6 @@
         </div>
     </header>
 
-    <!--end of the header-->
     <main>
         <div class="info-section">
             <div class="info">
@@ -302,8 +62,8 @@
                 <p>seats are available now<br />with dedicated support</p>
             </div>
         </div>
+        <hr/>
 
-        <!-- Additional information section -->
         <div class="additional-info">
             <div class="info">
                 <h2>popular locations</h2>
@@ -311,14 +71,12 @@
             </div>
         </div>
         
-        <!-- Images section -->
         <div class="images-section">
             <img src="./images/Seat 01.png" alt="Image 1">
             <img src="./images/Seat 02.png" alt="Image 2">
             <img src="./images/Seat 03.png" alt="Image 3">
         </div>
 
-        <!-- New info container section -->
         <div class="info-container">
             <div class="left-side">
                 <h2>we are always here<br> for your backup</h2>
@@ -345,7 +103,6 @@
             <button>Submit</button>
         </div>
         <hr/>
-
     </main>
 
     <footer>
@@ -394,14 +151,16 @@
             </div>
         </div>
         <hr/>
-        <div class="footer-copyright">
-            <p>© 2024 Brainwave.io. All rights reserved.</p>
-            <!-- <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div> -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>© 2024 Brainwave.io. All rights reserved.</p>
+            </div>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://whatsapp.com" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
     

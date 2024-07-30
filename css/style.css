@@ -1,43 +1,22 @@
+/* Root Variables */
 
-/* :root{
-    --light-bg:rgba(244, 247, 250, 1);
-    --green:rgba(104, 213, 133, 1);
-    --blue:rgba(64, 123, 255, 1);
-    --red:rgba(255, 113, 113, 1);
-    --light-blue:rgba(71, 59, 240, 1);
-    --dark-blue:rgba(22, 28, 45, 1);
-
-} */
-
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'gilroy-regular';
-    
-    /* color: var(--dark-blue); */
 }
-
 
 body {
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    overflow-x: hidden;
+    /* Prevent horizontal scrollbar */
 }
 
-.main-navigation{
-    /* max-width: 1189px; */
+.main-navigation {
     width: 1110px;
-    height:29px;
-    margin:0px auto;
-    
-
+    height: 29px;
+    margin: 0 auto;
 }
-
-
-
-
-
 
 .main-navigation nav {
     display: flex;
@@ -45,36 +24,782 @@ body {
     padding-top: 16px;
 }
 
-.main-naviagtion--left {
+.main-navigation--left {
     display: flex;
     align-items: center;
-    /* gap: 48px; */
 }
 
-.logo{
+.logo {
     margin-left: 30px;
-    width:154px;
-    height:29px;
-    color:#FFFFFF;
+    width: 154px;
+    height: 29px;
+    color: #FFFFFF;
     font-family: 'gilroy-bold';
-
 }
 
-.main-naviagtion--left ul {
+.main-navigation--left ul {
     display: flex;
     list-style: none;
     margin-left: 30rem;
-    /* padding: 0%; */
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     font-family: 'gilroy-bold';
     font-size: 15px;
-    margin: 0 10px; /* Space between each navigation item */
-    width: 333px;
-    height:26px;
-    color:#FFFFFF;
+    margin: 0 10px;
+    color: #FFFFFF;
+}
+
+.header-container {
+    position: relative;
+    background-image: url('../images/BG.png');
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-container {
+    position: absolute;
+    top: 40%;
+    /* Adjust to position vertically centered */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* White text color */
+    font-family: 'gilroy-bold';
+    text-align: center;
+    z-index: 1;
+    /* Ensure text is above background */
+    height: 130px;
+}
+
+.card-container {
+    position: absolute;
+    top: 60%;
+    /* Adjusted to sit below the text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    /* White background */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding inside the card */
+    width: 770px;
+    /* Card width */
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    /* Space items evenly */
+    align-items: center;
+    /* Vertically center items */
+}
+
+.card-container select,
+.card-container button {
+    margin: 0;
+    /* Remove margin between elements */
+    font-family: 'gilroy-regular';
+}
+
+.card-container button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #473BF0;
+    padding: 10px 20px;
+    /* Add padding inside the button */
+    width: 199px;
+    height: 51px;
+}
+
+.card-container select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'gilroy-regular';
+    padding: 10px;
+    /* Add padding inside the select box */
+    flex: 1;
+    /* Make select elements grow to fill available space */
+    margin-right: 10px;
+    /* Add spacing between select elements, if needed */
+    width: 250px;
+    height: 50px;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: flex-start;
+    /* Align items to the top */
+    padding: 40px 20px;
+}
+
+.info {
+    text-align: center;
+    font-family: 'gilroy-regular';
+    max-width: 300px;
+    /* Limit width of each info block */
+    margin-right: 50px;
+}
+
+.info h2 {
+    font-family: 'gilroy-bold';
+    color: black;
+}
+
+.info p {
+    font-family: 'gilroy-regular';
+    font-size: 19px;
+    color: grey;
+    margin: 0;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: center;
+    /* Center the container horizontally */
+    padding: 20px;
+    font-family: 'gilroy-bold';
+}
+
+.additional-info .info {
+    font-family: 'gilroy-regular';
+    font-size: 19px;
+    color: grey;
+}
+
+.images-section {
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 20px;
+    /* Space between images */
+}
+
+.images-section img {
+    width: 300px;
+    /* Adjust width as needed */
+    height: 556px;
+    /* Adjust height as needed */
+    border-radius: 8px;
+    /* Optional: Add rounded corners */
+    margin-right: 20px;
+}
+
+.info-container {
+    background-color: black;
+    /* Black background */
+    color: white;
+    /* White text color */
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    padding: 40px 20px;
+    gap: 20px;
+    /* Space between left and right sections */
+}
+
+.info-container .left-side {
+    flex: 1;
+    text-align: center;
+    /* Align text to the left */
+    font-family: 'gilroy';
+}
+
+.left-side h2 {
+    font-family: 'gilroy-bold';
+    font-size: 40px;
+}
+
+.left-side p {
+    font-family: 'gilroy-regular';
+    color: gray;
+}
+
+.info-container .right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Center card horizontally */
+}
+
+.info-container .right-side .card {
+    background-color: white;
+    /* Card background color */
+    color: black;
+    /* Card text color */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 20px;
+    width: 100%;
+    /* Full width */
+    max-width: 300px;
+    /* Max width for the card */
+    height: auto;
+    /* Auto height based on content */
+}
+
+.info-container .right-side .card h3 {
+    font-family: 'gilroy-bold';
+    margin: 0;
+    font-size: 18px;
+    /* Adjust font size */
+    margin-bottom: 10px;
+    /* Space between headings */
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.subscription-form input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    /* Width of input field */
+    margin-bottom: 10px;
+    /* Space between input and button */
+    font-family: 'gilroy';
+}
+
+.subscription-form button {
+    background-color: #473BF0;
+    /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 300px;
+    /* Button width */
+}
+
+footer {
+    background-color: #f4f4f4;
+    /* Background color for footer */
+    padding: 20px 0;
+    /* Padding around the footer */
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    /* Space items evenly */
+    max-width: 1200px;
+    /* Optional: Set a max-width */
+    width: 100%;
+    /* Full width of the container */
+    margin: 0 auto;
+    /* Center horizontally */
+}
+
+.info-block {
+    flex: 1;
+    margin-right: 20px;
+    /* Space between blocks */
+}
+
+.info-block h3 {
+    font-family: 'gilroy-bold';
+    color: gray;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    color: black;
+    font-family: 'gilroy-regular';
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    /* Space between items */
+    align-items: center;
+    /* Align items vertically centered */
+    max-width: 1200px;
+    /* Optional: Set a max-width */
+    width: 100%;
+    /* Full width of the container */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 10px 20px;
+    /* Padding around the bottom section */
+}
+
+.footer-copyright {
+    flex: 1;
+    text-align: left;
+    font-family: 'gilroy-regular';
+}
+
+.social-media {
+    display: flex;
+    margin-left: 0;
+    /* No margin before the first icon */
+}
+
+.social-icon {
+    color: #333;
+    /* Default icon color */
+    font-size: 24px;
+    /* Icon size */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.social-icon:hover {
+    color: #473BF0;
+    /* Change color on hover */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    /* Line color */
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #FFFFFF;
+    /* Background color for footer */
+    padding: 20px 0;
+    /* Padding around the footer */
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    /* Space items evenly */
+    max-width: 1000px;
+    /* Optional: Set a max-width */
+    width: 100%;
+    /* Full width of the container */
+    margin: 0 auto;
+    /* Center horizontally */
+}
+
+.info-block {
+    flex: 1;
+    margin-right: 20px;
+    /* Space between blocks */
+}
+
+.info-block h3 {
+    font-family: 'gilroy-bold';
+    color: gray;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    color: black;
+    font-family: 'gilroy-regular';
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    /* Space between items */
+    align-items: center;
+    /* Align items vertically centered */
+    max-width: 1200px;
+    /* Optional: Set a max-width */
+    width: 100%;
+    /* Full width of the container */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 10px 20px;
+    /* Padding around the bottom section */
+}
+
+.footer-copyright {
+    flex: 1;
+    text-align: left;
+    font-family: 'gilroy-regular';
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    /* Align icons vertically centered */
+}
+
+.social-icon {
+    color: #333;
+    /* Default icon color */
+    font-size: 24px;
+    /* Icon size */
+    text-decoration: none;
+    /* Remove underline from links */
+    margin-left: 10px;
+    /* Space between icons */
 
 }
 
+.social-icon:first-child {
+    margin-left: 0;
+    /* No margin before the first icon */
+}
+
+.social-icon:hover {
+    color: #473BF0;
+    /* Change color on hover */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    /* Line color */
+    margin: 20px 0;
+}
+
+/* Responsive code*/
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .main-navigation {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-navigation nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-navigation--left ul {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .main-navigation--left ul li {
+        margin-bottom: 10px;
+    }
+
+    .text-container {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card-container select,
+    .card-container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .images-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images-section img {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-container .left-side,
+    .info-container .right-side {
+        width: 100%;
+    }
+
+    .info-container .right-side .card {
+        max-width: 90%;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info .info-block {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom .social-media {
+        margin-top: 10px;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-navigation {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-navigation nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-navigation--left ul {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .main-navigation--left ul li {
+        margin-bottom: 10px;
+    }
+
+    .text-container {
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card-container select,
+    .card-container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .images-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images-section img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-container .left-side,
+    .info-container .right-side {
+        width: 100%;
+    }
+
+    .info-container .right-side .card {
+        max-width: 80%;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info .info-block {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom .social-media {
+        margin-top: 10px;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+    .main-navigation {
+        width: 1110px;
+        height: 29px;
+        margin: 0 auto;
+    }
+
+    .main-navigation nav {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 16px;
+    }
+
+    .main-navigation--left ul {
+        display: flex;
+        list-style: none;
+        margin-left: 30rem;
+    }
+
+    .text-container {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: 'gilroy-bold';
+        text-align: center;
+        z-index: 1;
+        height: 130px;
+    }
+
+    .card-container {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border-radius: 8px;
+        padding: 10px;
+        width: 770px;
+        height: 95px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .info-section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 20px;
+    }
+
+    .images-section {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .images-section img {
+        width: 300px;
+        height: 556px;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+
+    .info-container {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .info-container .left-side {
+        flex: 1;
+        text-align: center;
+        font-family: 'gilroy';
+    }
+
+    .info-container .right-side {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .info-container .right-side .card {
+        background-color: white;
+        color: black;
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+
+    .footer-bottom .social-media {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-bottom .social-icon {
+        color: #333;
+        font-size: 24px;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+}
