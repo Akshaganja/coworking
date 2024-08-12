@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./fonts/gilroy-font/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Coworking</title>
@@ -17,13 +19,18 @@
                 <nav>
                     <div class="main-navigation--left">
                         <div class="logo">
-                            BrainWave.io
+                            <img src="./images/shadepro.png" alt="Image 1">
                         </div>
-                        <ul>
-                            <li><a href="#">Demos</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Contact</a></li>
+                        <div class="menu-toggle" id="menu-toggle">
+                            <i class="fas fa-bars"></i> <!-- Font Awesome icon for the menu toggle -->
+                        </div>
+            
+                        <!-- Navigation Menu -->
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -76,11 +83,47 @@
             <img src="./images/Seat 02.png" alt="Image 2">
             <img src="./images/Seat 03.png" alt="Image 3">
         </div>
+        <div style="text-align: center; margin: 20px 0; background-color: #F4F7FA;padding: 80px;">
+            <!-- Information above images -->
+           
+        
+            <!-- Images section -->
+            <div style="display: flex; justify-content: center; gap: 40px;">
+                <!-- Left side image -->
+                <div>
+                    <div style="margin-bottom: 20px;">
+                        <h2 style="font-size: 48px; font-family: gilroy-bold;">work around very <br>talented people</h2>
+                        <p style="font-size: 19px; font-family: gilroy-regular;color: grey;">Information is displayed here to provide context or<br> details related to the images below.</p>
+                    </div>
+                    <img src="./images/Img 1.png" alt="Left Side Image" style="width: 100%; max-width: 200px; height: 200px;">
+                </div>
+                
+                <!-- <div> -->
+                    <img src="./images/Img 2.png" alt="Right Side Image" style="width: 100%; max-width: 200px; height: 300px;">
+                <!-- </div> -->
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <div class="info">
+                <h2>Dedicated Task</h2>
+                <p>seats are available now<br />with dedicated support</p>
+            </div>
+            <div class="info">
+                <h2>High speed Internet</h2>
+                <p>seats are available now<br />with dedicated support</p>
+            </div>
+            <div class="info">
+                <h2>Unlimited coffee</h2>
+                <p>seats are available now<br />with dedicated support</p>
+            </div>
+        </div>
 
         <div class="info-container">
             <div class="left-side">
-                <h2>we are always here<br> for your backup</h2>
+                <h2>we are always here<br> for your backup</h2><br/>
                 <p>Discover the advantages of <br>working in our coworking.</p>
+                
             </div>
             <div class="right-side">
                 <div class="card">
@@ -96,6 +139,7 @@
             <div class="info">
                 <h2>Get latest updates</h2>
                 <p>Here is some more detailed information</p>
+
             </div>
         </div>
         <div class="subscription-form">
@@ -163,7 +207,8 @@
             </div>
         </div>
     </footer>
-    
+<!-- Include Font Awesome for icons -->
+<script src="./js/script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 
 </html>
